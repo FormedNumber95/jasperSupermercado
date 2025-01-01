@@ -32,12 +32,48 @@ public class supermercadoController {
 
     @FXML
     void AccionAgruparSecciones(ActionEvent event) {
-
+    	try {
+			ConexionBBDD db=new ConexionBBDD();
+			InputStream reportStream =getClass().getResourceAsStream("/jasper/AgruparSecciones.jasper");
+			if (reportStream == null) {
+                System.out.println("El archivo no esta ahí");
+            }else {
+                System.out.println("El archivo se ha encontrado");
+            }
+            JasperReport report = (JasperReport) JRLoader.loadObject(reportStream);
+            Map<String, Object> parameters = new HashMap<>();
+            parameters.put("IMAGE_PATH", db.getClass().getResource("/imagenes/").toString());
+            JasperPrint jprint = JasperFillManager.fillReport(report, parameters, db.getConnection());
+            JasperViewer viewer = new JasperViewer(jprint, false);
+            viewer.setVisible(true);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (JRException e) {
+			e.printStackTrace();
+		}
     }
 
     @FXML
     void AccionGraficoProductos(ActionEvent event) {
-
+    	try {
+			ConexionBBDD db=new ConexionBBDD();
+			InputStream reportStream =getClass().getResourceAsStream("/jasper/GraficoProductos.jasper");
+			if (reportStream == null) {
+                System.out.println("El archivo no esta ahí");
+            }else {
+                System.out.println("El archivo se ha encontrado");
+            }
+            JasperReport report = (JasperReport) JRLoader.loadObject(reportStream);
+            Map<String, Object> parameters = new HashMap<>();
+            parameters.put("IMAGE_PATH", db.getClass().getResource("/imagenes/").toString());
+            JasperPrint jprint = JasperFillManager.fillReport(report, parameters, db.getConnection());
+            JasperViewer viewer = new JasperViewer(jprint, false);
+            viewer.setVisible(true);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (JRException e) {
+			e.printStackTrace();
+		}
     }
 
     @FXML
@@ -65,7 +101,25 @@ public class supermercadoController {
 
     @FXML
     void AccionTablaProductos(ActionEvent event) {
-
+    	try {
+			ConexionBBDD db=new ConexionBBDD();
+			InputStream reportStream =getClass().getResourceAsStream("/jasper/TablaProductos.jasper");
+			if (reportStream == null) {
+                System.out.println("El archivo no esta ahí");
+            }else {
+                System.out.println("El archivo se ha encontrado");
+            }
+            JasperReport report = (JasperReport) JRLoader.loadObject(reportStream);
+            Map<String, Object> parameters = new HashMap<>();
+            parameters.put("IMAGE_PATH", db.getClass().getResource("/imagenes/").toString());
+            JasperPrint jprint = JasperFillManager.fillReport(report, parameters, db.getConnection());
+            JasperViewer viewer = new JasperViewer(jprint, false);
+            viewer.setVisible(true);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (JRException e) {
+			e.printStackTrace();
+		}
     }
 
 }
