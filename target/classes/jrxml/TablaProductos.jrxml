@@ -113,7 +113,7 @@ FROM supermercado.producto]]></query>
 						</element>
 					</tableHeader>
 					<detailCell height="30" style="Table_TD">
-						<element kind="textField" uuid="d226963f-0a6f-4214-a031-87386bcf07b3" x="0" y="0" width="185" height="30">
+						<element kind="textField" uuid="d226963f-0a6f-4214-a031-87386bcf07b3" x="0" y="0" width="185" height="30" hTextAlign="Right">
 							<expression><![CDATA[$F{stock}]]></expression>
 						</element>
 					</detailCell>
@@ -126,7 +126,7 @@ FROM supermercado.producto]]></query>
 						</element>
 					</tableHeader>
 					<detailCell height="30" style="Table_TD">
-						<element kind="textField" uuid="5d1376f1-d077-455c-ae63-e7b986632821" x="0" y="0" width="182" height="30">
+						<element kind="textField" uuid="5d1376f1-d077-455c-ae63-e7b986632821" x="0" y="0" width="182" height="30" hTextAlign="Right">
 							<expression><![CDATA[$F{precio}]]></expression>
 						</element>
 					</detailCell>
