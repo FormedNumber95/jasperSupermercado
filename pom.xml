@@ -36,6 +36,11 @@
 	        </exclusion>
 	      </exclusions>
 	    </dependency>
+	    <dependency>
+		    <groupId>net.sf.jasperreports</groupId>
+		    <artifactId>jasperreports-chart-themes</artifactId>
+		    <version>7.0.1</version>
+		</dependency>
 	    <!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
         <dependency>
             <groupId>org.mariadb.jdbc</groupId>

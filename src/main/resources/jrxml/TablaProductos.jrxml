@@ -87,6 +87,19 @@ FROM supermercado.producto]]></query>
 			<expression><![CDATA[$P{IMAGE_PATH}+"d20.png"]]></expression>
 		</element>
 	</title>
+	<pageFooter height="27">
+		<element kind="frame" uuid="9be4217b-ed38-4562-965f-a7c921d172e0" mode="Opaque" x="0" y="1" width="555" height="24" forecolor="#D0B48E" backcolor="#000000">
+			<element kind="textField" uuid="1d852b81-fdb2-4b14-b52e-ca20d3fc3e58" x="513" y="0" width="40" height="20" forecolor="#FFFFFF" fontSize="10.0" evaluationTime="Report" bold="false" vTextAlign="Middle">
+				<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+			</element>
+			<element kind="textField" uuid="ea9d0c3c-b0ab-4805-955f-da3ee28e2714" x="433" y="0" width="80" height="20" forecolor="#FFFFFF" fontSize="10.0" bold="false" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+			</element>
+			<element kind="textField" uuid="360fc9e7-2513-45fe-8e00-ea9d33040862" x="2" y="1" width="197" height="20" forecolor="#FFFFFF" fontSize="10.0" pattern="EEEEE dd MMMMM yyyy" bold="false" vTextAlign="Middle">
+				<expression><![CDATA[new java.util.Date()]]></expression>
+			</element>
+		</element>
+	</pageFooter>
 	<summary height="83" splitType="Stretch">
 		<element kind="component" uuid="ab934e6b-d7b6-4526-9cf1-fad1061e884a" x="0" y="0" width="553" height="60" printRepeatedValues="false">
 			<component kind="table">

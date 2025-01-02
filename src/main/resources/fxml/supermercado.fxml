@@ -12,7 +12,7 @@
          <content>
             <VBox alignment="CENTER">
                <children>
-                  <Button fx:id="btnListarProductos" defaultButton="true" mnemonicParsing="false" onAction="#AccionListarProductos" text="Listar Productos" />
+                  <Button fx:id="btnListarProductos" mnemonicParsing="false" onAction="#AccionListarProductos" text="Listar Productos" />
                </children>
                <padding>
                   <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
@@ -24,7 +24,7 @@
          <content>
             <VBox alignment="CENTER">
                <children>
-                  <Button fx:id="btnAgruparSecciones" defaultButton="true" mnemonicParsing="false" onAction="#AccionAgruparSecciones" text="Agrupar Por secciones" />
+                  <Button fx:id="btnAgruparSecciones" mnemonicParsing="false" onAction="#AccionAgruparSecciones" text="Agrupar Por secciones" />
                </children>
                <padding>
                   <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
@@ -36,7 +36,7 @@
          <content>
             <VBox alignment="CENTER">
                <children>
-                  <Button fx:id="btnTablaProductos" defaultButton="true" mnemonicParsing="false" onAction="#AccionTablaProductos" text="Tabla de Productos" />
+                  <Button fx:id="btnTablaProductos" mnemonicParsing="false" onAction="#AccionTablaProductos" text="Tabla de Productos" />
                </children>
                <padding>
                   <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
@@ -48,7 +48,7 @@
          <content>
             <VBox alignment="CENTER">
                <children>
-                  <Button fx:id="btnGraficoProductos" defaultButton="true" mnemonicParsing="false" onAction="#AccionGraficoProductos" text="Grafico de Productos" />
+                  <Button fx:id="btnGraficoProductos" mnemonicParsing="false" onAction="#AccionGraficoProductos" text="Grafico de Productos" />
                </children>
                <padding>
                   <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />

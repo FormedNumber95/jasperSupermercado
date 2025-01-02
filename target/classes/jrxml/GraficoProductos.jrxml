@@ -1,0 +1,73 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="GraficoProductos" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="998c3e04-1d31-44fd-9921-4e8b285003bb">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="conexionMariaIntento2"/>
+	<parameter name="IMAGE_PATH" class="java.lang.String"/>
+	<query language="SQL"><![CDATA[SELECT stock,
+	nombre
+FROM supermercado.producto]]></query>
+	<field name="stock" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="stock"/>
+		<property name="com.jaspersoft.studio.field.label" value="stock"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producto"/>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="producto"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="132" splitType="Stretch">
+		<element kind="frame" uuid="f0f6d6f7-76f1-4212-9016-9d8975692533" mode="Opaque" x="0" y="0" width="442" height="100" backcolor="#000000">
+			<element kind="staticText" uuid="8ce94700-a6f3-43a4-837a-0f56d5698e27" x="0" y="0" width="370" height="66" forecolor="#FFFFFF" fontSize="50.0" bold="false">
+				<text><![CDATA[Pako's Market]]></text>
+			</element>
+			<element kind="staticText" uuid="345bc206-8df6-454e-88ea-9757f42b2fbe" x="80" y="66" width="290" height="29" forecolor="#FFFFFF" fontSize="22.0" bold="false">
+				<text><![CDATA[Triboars's road 23, Sword Coast]]></text>
+			</element>
+		</element>
+		<element kind="frame" uuid="4a501902-7791-49a3-994d-6890a0d8ed4a" mode="Opaque" x="0" y="100" width="553" height="32" forecolor="#000000" backcolor="#CC0000">
+			<element kind="textField" uuid="6ce484a5-e2e1-4bab-aade-d5bd270f4c25" x="406" y="12" width="144" height="20" forecolor="#FFFFFF" fontSize="12.0" pattern="EEEEE dd MMMMM yyyy" hTextAlign="Right">
+				<expression><![CDATA[new java.util.Date()]]></expression>
+			</element>
+		</element>
+		<element kind="image" uuid="b12a3b42-1cfc-4674-95fe-4bf01b921368" x="442" y="0" width="110" height="99">
+			<expression><![CDATA[$P{IMAGE_PATH}+"d20.png"]]></expression>
+		</element>
+	</title>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="5" splitType="Stretch"/>
+	<detail>
+		<band height="8" splitType="Stretch"/>
+	</detail>
+	<columnFooter height="5" splitType="Stretch"/>
+	<pageFooter height="26" splitType="Stretch">
+		<element kind="frame" uuid="5633f64e-1bee-4d74-b44d-f4cf9796e755" mode="Opaque" x="0" y="1" width="555" height="24" forecolor="#D0B48E" backcolor="#000000">
+			<element kind="textField" uuid="59d99289-5e5c-43e0-a0b1-6cdcded04cb9" x="513" y="0" width="40" height="20" forecolor="#FFFFFF" fontSize="10.0" evaluationTime="Report" bold="false" vTextAlign="Middle">
+				<expression><![CDATA[" " + $V{PAGE_NUMBER}]]></expression>
+			</element>
+			<element kind="textField" uuid="c38cfc81-fa4a-4fc1-8a52-8d36a0960afb" x="433" y="0" width="80" height="20" forecolor="#FFFFFF" fontSize="10.0" bold="false" hTextAlign="Right" vTextAlign="Middle">
+				<expression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></expression>
+			</element>
+			<element kind="textField" uuid="545f4c26-6229-4aa7-ac26-fe5d715ab01e" x="2" y="1" width="197" height="20" forecolor="#FFFFFF" fontSize="10.0" pattern="EEEEE dd MMMMM yyyy" bold="false" vTextAlign="Middle">
+				<expression><![CDATA[new java.util.Date()]]></expression>
+			</element>
+		</element>
+	</pageFooter>
+	<summary height="204" splitType="Stretch">
+		<element kind="chart" chartType="bar" uuid="54cab39e-7fb8-4d64-976c-2aa978ecdcbb" x="0" y="0" width="553" height="200" evaluationTime="Report">
+			<dataset kind="category">
+				<series>
+					<seriesExpression><![CDATA["PRODUCTOS"]]></seriesExpression>
+					<categoryExpression><![CDATA[$F{nombre}]]></categoryExpression>
+					<valueExpression><![CDATA[$F{stock}]]></valueExpression>
+				</series>
+			</dataset>
+			<plot labelRotation="45.0" categoryAxisLabelColor="#000000" categoryAxisTickLabelColor="#000000" categoryAxisTickLabelMask="" categoryAxisLineColor="#000000" valueAxisLabelColor="#000000" valueAxisTickLabelColor="#000000" valueAxisLineColor="#000000" categoryAxisTickLabelRotation="45.0">
+				<categoryAxisLabelFont fontSize="10.0"/>
+				<categoryAxisTickLabelFont fontSize="10.0"/>
+				<itemLabel/>
+			</plot>
+		</element>
+	</summary>
+</jasperReport>
