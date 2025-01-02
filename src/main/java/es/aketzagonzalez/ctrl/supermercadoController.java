@@ -16,20 +16,32 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.view.JasperViewer;
 
+/**
+ * The Class supermercadoController.
+ */
 public class supermercadoController {
 
+    /** The btn agrupar secciones. */
     @FXML
     private Button btnAgruparSecciones;
 
+    /** The btn grafico productos. */
     @FXML
     private Button btnGraficoProductos;
 
+    /** The btn listar productos. */
     @FXML
     private Button btnListarProductos;
 
+    /** The btn tabla productos. */
     @FXML
     private Button btnTablaProductos;
 
+    /**
+     * Accion agrupar secciones.
+     *
+     * @param event the event
+     */
     @FXML
     void AccionAgruparSecciones(ActionEvent event) {
     	try {
@@ -53,6 +65,11 @@ public class supermercadoController {
 		}
     }
 
+    /**
+     * Accion grafico productos.
+     *
+     * @param event the event
+     */
     @FXML
     void AccionGraficoProductos(ActionEvent event) {
     	try {
@@ -76,6 +93,11 @@ public class supermercadoController {
 		}
     }
 
+    /**
+     * Accion listar productos.
+     *
+     * @param event the event
+     */
     @FXML
     void AccionListarProductos(ActionEvent event) {
     	try {
@@ -99,6 +121,11 @@ public class supermercadoController {
 		}
     }
 
+    /**
+     * Accion tabla productos.
+     *
+     * @param event the event
+     */
     @FXML
     void AccionTablaProductos(ActionEvent event) {
     	try {
